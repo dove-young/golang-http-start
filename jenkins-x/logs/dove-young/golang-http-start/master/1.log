@@ -1,0 +1,88 @@
+
+Showing logs for build [32mdove-young-golang-http-start-ma-1[0m stage [32mmeta-pipeline[0m and container [32mstep-credential-initializer-d8zwn[0m
+{"level":"warn","ts":1569221696.6919541,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1569221696.6944926,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mdove-young-golang-http-start-ma-1[0m stage [32mmeta-pipeline[0m and container [32mstep-working-dir-initializer-b67fz[0m
+{"level":"warn","ts":1569221697.3492892,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1569221697.3537226,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"mkdir -p /workspace/source\""}
+
+Showing logs for build [32mdove-young-golang-http-start-ma-1[0m stage [32mmeta-pipeline[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mdove-young-golang-http-start-ma-1[0m stage [32mmeta-pipeline[0m and container [32mstep-git-source-meta-dove-young-golang-http-sta-mnhnz[0m
+{"level":"warn","ts":1569221703.7704244,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1569221704.245281,"logger":"fallback-logger","caller":"git/git.go:102","msg":"Successfully cloned https://github.com/**********/golang-http-start.git @ d47e55c3a214dba072958565faed986488b00766 in path /workspace/source"}
+
+Showing logs for build [32mdove-young-golang-http-start-ma-1[0m stage [32mmeta-pipeline[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:d47e55c3a214dba072958565faed986488b00766
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mdove-young-golang-http-start-ma-1[0m stage [32mmeta-pipeline[0m and container [32mstep-merge-pull-refs[0m
+SKIP merge-pull-refs: Nothing to merge
+
+Showing logs for build [32mdove-young-golang-http-start-ma-1[0m stage [32mmeta-pipeline[0m and container [32mstep-create-effective-pipeline[0m
+Deleting and cloning the Jenkins X versions repo
+Cloning the Jenkins X versions repo https://github.com/**********/jenkins-x-versions.git with ref refs/heads/master to /builder/home/.**/jenkins-x-versions
+Effective pipeline written to jenkins-x-effective.yml
+
+Showing logs for build [32mdove-young-golang-http-start-ma-1[0m stage [32mmeta-pipeline[0m and container [32mstep-create-tekton-crds[0m
+running command: echo \$(**-release-version) > VERSION
+
+running command: ** step tag --version \$(cat VERSION)
+Updating chart version in charts/golang-http-start/Chart.yaml to 0.0.1
+Updating repository in charts/golang-http-start/values.yaml to mycluster.icp:8500/**/**********/golang-http-start
+Updating tag in charts/golang-http-start/values.yaml to 0.0.1
+Tag v0.0.1 created and pushed to remote origin
+
+WARNING: failed to find secret kaniko-secret in namespace **: secrets "kaniko-secret" not found
+PipelineActivity for **********-golang-http-start-master-1
+Applying changes 
+upserted PipelineResource **********-golang-http-start-ma for the git repository https://github.com/**********/golang-http-start.git
+upserted Task **********-golang-http-start-ma-from-build-pack-1
+upserted Pipeline **********-golang-http-start-ma-1
+created PipelineRun **********-golang-http-start-ma-1
+created PipelineStructure **********-golang-http-start-ma-1
+
+Showing logs for build [32mdove-young-golang-http-start-ma-1[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-6b4kk[0m
+{"level":"warn","ts":1569221716.8232827,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1569221716.8248563,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mdove-young-golang-http-start-ma-1[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-tprqr[0m
+{"level":"warn","ts":1569221717.4856768,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1569221717.490363,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"mkdir -p /workspace/source /workspace/source/charts/golang-http-start\""}
+
+Showing logs for build [32mdove-young-golang-http-start-ma-1[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mdove-young-golang-http-start-ma-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-dove-young-golang-http-start-ma-xwdf7[0m
+{"level":"warn","ts":1569222052.8137884,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1569222053.2489557,"logger":"fallback-logger","caller":"git/git.go:102","msg":"Successfully cloned https://github.com/**********/golang-http-start.git @ v0.0.1 in path /workspace/source"}
+
+Showing logs for build [32mdove-young-golang-http-start-ma-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:d47e55c3a214dba072958565faed986488b00766
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mdove-young-golang-http-start-ma-1[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Generated Git credentials file /workspace/xdg_config/git/credentials
+
+Showing logs for build [32mdove-young-golang-http-start-ma-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-make-build[0m
+CGO_ENABLED=0 GO15VENDOREXPERIMENT=1 go build -ldflags '' -o bin/golang-http-start main.go
+
+Showing logs for build [32mdove-young-golang-http-start-ma-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
+[36mINFO[0m[0000] No base image, nothing to extract            
+[36mINFO[0m[0000] cmd: EXPOSE                                  
+[36mINFO[0m[0000] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0000] Using files from context: [/workspace/source/bin] 
+[36mINFO[0m[0000] Skipping unpacking as no commands require it. 
+[36mINFO[0m[0000] Taking snapshot of full filesystem...        
+[36mINFO[0m[0000] EXPOSE 8080                                  
+[36mINFO[0m[0000] cmd: EXPOSE                                  
+[36mINFO[0m[0000] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0000] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0000] ENTRYPOINT ["/golang-http-start"]            
+[36mINFO[0m[0000] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0000] Using files from context: [/workspace/source/bin] 
+[36mINFO[0m[0000] COPY ./bin/ /                                
+[36mINFO[0m[0000] Taking snapshot of files...                  
+error pushing image: failed to push to destination mycluster.icp:8500/**/**********/golang-http-start:0.0.1: Get https://mycluster.icp:8500/v2/: x509: certificate signed by unknown authority
+[31m
+Pipeline failed on stage 'from-build-pack' : container 'step-build-container-build'. The execution of the pipeline has stopped.[0m
